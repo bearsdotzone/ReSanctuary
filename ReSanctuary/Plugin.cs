@@ -60,7 +60,7 @@ public sealed class Plugin : IDalamudPlugin {
                 DrawConfigUI();
                 break;
             case "widget":
-                WindowSystem.GetWindow("ReSanctuary Widget").IsOpen ^= true;
+                WindowSystem.GetWindow("RS Todo List").IsOpen ^= true;
                 break;
             default:
                 WindowSystem.GetWindow("ReSanctuary").IsOpen ^= true;

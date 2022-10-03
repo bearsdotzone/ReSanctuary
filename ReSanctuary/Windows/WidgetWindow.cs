@@ -23,7 +23,7 @@ public class WidgetWindow : Window, IDisposable {
 
     private Dictionary<uint, TextureWrap> todoTextureCache;
 
-    public WidgetWindow(Plugin plugin) : base("ReSanctuary Widget") {
+    public WidgetWindow(Plugin plugin) : base("RS Todo List") {
         SizeConstraints = new WindowSizeConstraints {
             MinimumSize = new Vector2(150, 75) * ImGuiHelpers.GlobalScale,
             MaximumSize = new Vector2(float.MaxValue, float.MaxValue)
@@ -35,6 +35,8 @@ public class WidgetWindow : Window, IDisposable {
         itemSheet = Plugin.DataManager.Excel.GetSheet<Item>();
 
         todoTextureCache = new();
+
+        
     }
 
     public void Dispose() { }

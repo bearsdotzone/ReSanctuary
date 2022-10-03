@@ -24,7 +24,7 @@ public class ConfigWindow : Window, IDisposable {
 
     public override void Draw() {
         var lockWidget = Configuration.LockWidget;
-        if (ImGui.Checkbox("Lock widget", ref lockWidget)) {
+        if (ImGui.Checkbox("Lock Todo", ref lockWidget)) {
             Configuration.LockWidget = lockWidget;
             Configuration.Save();
         }
