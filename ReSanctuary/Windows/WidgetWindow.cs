@@ -40,13 +40,15 @@ public class WidgetWindow : Window, IDisposable {
     public void Dispose() { }
 
     public override void PreDraw() {
+        if(Plugin.Configuration.EscCloses)
+            RespectCloseHotkey = true;
+        else
+            RespectCloseHotkey = false;
         if (Plugin.Configuration.LockWidget) {
             Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoDocking | ImGuiWindowFlags.NoMove |
                     ImGuiWindowFlags.NoTitleBar;
-            RespectCloseHotkey = false;
         } else {
             Flags = ImGuiWindowFlags.None;
-            RespectCloseHotkey = true;
         }
     }
 

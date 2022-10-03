@@ -28,5 +28,12 @@ public class ConfigWindow : Window, IDisposable {
             Configuration.LockWidget = lockWidget;
             Configuration.Save();
         }
+
+        var escClose = Configuration.EscCloses;
+        if (ImGui.Checkbox("Esc Closes Todo List", ref escClose))
+        {
+            Configuration.EscCloses = escClose;
+            Configuration.Save();
+        }
     }
 }
