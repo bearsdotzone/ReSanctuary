@@ -14,7 +14,7 @@ public class Configuration : IPluginConfiguration {
     public List<uint> CreatureFilterHide { get; set; } = new();
     public bool LockWidget { get; set; }
 
-    public bool EscCloses { get; set; } = false;
+    public bool EscCloses { get; set; } = true;
 
     // the below exist just to make saving less cumbersome
     [NonSerialized] private DalamudPluginInterface? PluginInterface;

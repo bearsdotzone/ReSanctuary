@@ -158,7 +158,7 @@ public class MainWindow : Window, IDisposable {
                     Utils.AddToTodoList(Plugin.Configuration, requiredMat, matCount);
                 }
 
-                Plugin.WindowSystem.GetWindow("ReSanctuary Widget").IsOpen = true;
+                Plugin.WindowSystem.GetWindow("RS Todo List").IsOpen = true;
             }
 
             ImGui.Text("Materials:");
@@ -340,7 +340,7 @@ public class MainWindow : Window, IDisposable {
         var todoList = Plugin.Configuration.TodoList;
 
         if (ImGui.Button("Open Todo Widget")) {
-            Plugin.WindowSystem.GetWindow("ReSanctuary Widget").IsOpen = true;
+            Plugin.WindowSystem.GetWindow("RS Todo List").IsOpen = true;
         }
 
         foreach (var (id, amount) in todoList) {
